@@ -1,8 +1,11 @@
 @import "utils/libs";
+@import "utils/settings";
 @import "utils/vars";
 @import "utils/mixins";
 @import "utils/fonts";
 @import "utils/reset";
+@import "utils/custom-classes.scss";
+@import "utils/buttons.scss";
 
 html {
   line-height: $mainLineHeight;
@@ -23,6 +26,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  color: $mainFontColor;
   font-family: $mainFont;
 	font-size: $mainFontSize;
   font-weight: $mainFontWeight;
@@ -42,20 +46,6 @@ ul, li {
   list-style-type: none;
 }
 
-section, .section {
-  position: relative;
-  padding: 40px 0;
-  @media screen and (max-width: $desktopWidth) {
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 28px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 20px 0;
-  }
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -69,22 +59,6 @@ section, .section {
   min-height: 100vh;
 }
 
-.container {
-  width: 100%;
-  flex: 0 0 auto;
-  position: relative;
-  margin: 0 auto;
-  max-width: $desktopWidth;
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: tableWidth;
-  }
-  @media screen and (max-width: $tableWidth) {
-    max-width: phoneWidth;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: smPhoneWidth;
-  }
-}
-
 // Modules
-// @import "modules/my-module.scss";
+@import "modules/header";
+@import "modules/footer";
