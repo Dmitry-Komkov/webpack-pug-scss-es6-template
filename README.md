@@ -1,11 +1,6 @@
-<div align="center">
-  <img width="200" height="200" src="https://webpack.js.org/assets/icon-square-big.svg">
-  <h1>Webpack Template</h1>
-  <p>
-    Webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
-  </p>
-  <p>Base Template: <a href="https://github.com/vedees/webpack-template">webpack-template</a></p>
-  <p>Author: <a href="https://tocode.ru" target="_blank">To code</a> | <a href="https://www.youtube.com/playlist?list=PLkCrmfIT6LBQWN02hNj6r1daz7965GxsV" target="_blank">Youtube guide in Russian</a></p>
+<div>
+  <h1 align="center">Webpack Template</h1>
+  <p>The structure of the template was taken from: <a href="https://github.com/vedees/webpack-template">webpack-template</a></p>
 </div>
 
 
@@ -164,74 +159,6 @@ Example:
       inject: true
     })
 ```
-
-
-## Vue install:
-Default: **already have**
-
-1. Install vue
-``` bash
-npm install vue --save
-```
-2. Init vue `index.js`:
-``` js
-const app = new Vue({
-  el: '#app'
-})
-```
-3. Create div id app
-``` pug
-#app
-  //- Content
-```
-
-## Vuex install:
-1. Install vuex
-``` bash
-npm install vuex --save
-```
-2. Import Vuex
-``` js
-import store from './store'
-```
-3. Create index.js in `./store`
-``` js
-import Vue from 'vue'
-import Vuex from 'vuex'
-Vue.use(Vuex)
-
-export default new Vuex.Store({
-  // vuex content
-})
-```
-
-## Add Vue Components:
-Create your component in `/components/`
-
-**PUG Usage:**
-1. Init component in `index.js`:
-``` js
-Vue.component('example-component', require('./components/Example.vue').default)
-```
-2. Any pug files:
-``` pug
-example-component
-```
-
-**VUE Usage:**
-1. import components in .vue:
-``` js
-import example from '~/components/Example.vue'
-```
-2. Register component:
-``` js
-  components: {
-    example
-  }
-```
-3. Init in vue component:
-``` html
-<example />
 ```
 
 ## Add Fonts:
@@ -254,9 +181,3 @@ Add vars for font in `/assets/scss/utils/vars.scss`:
 ``` scss
 $mySecontFont : 'Helvetica-Base', Arial, sans-serif;
 ```
-
-
-## License
-[MIT](./LICENSE)
-
-Copyright (c) 2018-present, [Evgenii Vedegis](https://github.com/vedees)
